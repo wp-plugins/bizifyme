@@ -1,4 +1,4 @@
-=== Bizify.me ===
+﻿=== Bizify.me ===
 Contributors: bizifyme 
 Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway
 Requires at least: 2.6
@@ -20,7 +20,7 @@ This plugin adds the Bizify.me JavaScript to your WordPress blog. The JavaScript
 
 If you have not already created a Bizify.me merchant account you need to create a new Bizify.me merchant account to be able to use this plugin on your WordPress blog.
 
-To create a new Bizify.me merchant account, visit: <https://www.bizify.me>
+To create a new Bizify.me merchant account, visit: <https://www.bizify.me/wordpress/>
 
 == Installation ==
 
