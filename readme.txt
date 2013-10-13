@@ -45,7 +45,7 @@ Bizify.me also handle all payments to your bank account and we can do a bank tra
 
 = I still don't get it! Do you have any other FAQ page?  =
 
-Yes, we do. You can find our regular FAQ page at: <https://www.bizify.me/faq/>
+Yes, we do. You can find our regular FAQ page at: <https://www.bizify.me/help/>
 
 You can also read our *[Getting started](https://www.bizify.me/getting-started)* page and also look at our *[Examples](https://www.bizify.me/getting-started/examples/)*.
 
