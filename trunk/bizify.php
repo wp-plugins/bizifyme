@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizify.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.1.0
+Version: 1.1
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPL2
