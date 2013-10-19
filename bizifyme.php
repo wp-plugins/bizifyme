@@ -93,6 +93,12 @@ function bizifyme_image_shortcode($attributes, $content = null)
 	
     extract(shortcode_atts(array('src' => '', 'alt' => 'Bizify.me image','width' => '', 'height' => '', 'class' => '', 'style' => ''), $attributes));
 	
+	if(is_ssl())
+	{
+		$src = str_replace("http://bizify.me", "https://bizify.me", $src);
+		$src = str_replace("http://cdn.bizify.me", "https://cdn.bizify.me", $src);
+	}
+	
     return '<img alt="' . $alt . '" src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '" />';
 }
 
@@ -103,6 +109,12 @@ function bizifyme_player_shortcode($attributes, $content = null)
     $height = '';
 	$class = '';
 	$style = '';
+	
+	if(is_ssl())
+	{
+		$src = str_replace("http://bizify.me", "https://bizify.me", $src);
+		$src = str_replace("http://cdn.bizify.me", "https://cdn.bizify.me", $src);
+	}
 	
     extract(shortcode_atts(array('src' => '', 'width' => '', 'height' => '', 'class' => '', 'style' => 'border: none'), $attributes));
 	
@@ -117,6 +129,12 @@ function bizifyme_video_shortcode($attributes, $content = null)
 	$class = '';
 	$style = '';
 	
+	if(is_ssl())
+	{
+		$src = str_replace("http://bizify.me", "https://bizify.me", $src);
+		$src = str_replace("http://cdn.bizify.me", "https://cdn.bizify.me", $src);
+	}
+	
     extract(shortcode_atts(array('src' => '', 'width' => '', 'height' => '', 'class' => '', 'style' => ''), $attributes));
 	
     return '<video src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '" controls="controls"></video>';
@@ -129,6 +147,12 @@ function bizifyme_audio_shortcode($attributes, $content = null)
     $height = '';
 	$class = '';
 	$style = '';
+	
+	if(is_ssl())
+	{
+		$src = str_replace("http://bizify.me", "https://bizify.me", $src);
+		$src = str_replace("http://cdn.bizify.me", "https://cdn.bizify.me", $src);
+	}
 	
     extract(shortcode_atts(array('src' => '', 'width' => '', 'height' => '', 'class' => '', 'style' => ''), $attributes));
 	
