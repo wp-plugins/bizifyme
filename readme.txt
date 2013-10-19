@@ -61,4 +61,7 @@ Yes, you can! We have an extensive affiliate system and we provide affiliate acc
 
 == Changelog ==
 
+= 1.2 =
+* Added support for easy connection to Bizify.me account
+
 == Upgrade Notice ==
