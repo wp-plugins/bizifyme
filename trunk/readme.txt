@@ -1,9 +1,9 @@
 ﻿=== Bizify.me ===
 Contributors: bizifyme 
 Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway
-Requires at least: 2.6
-Tested up to: 3.6
-Stable tag: 1.1
+Requires at least: 3.0
+Tested up to: 3.6.1
+Stable tag: 1.2
 License: GPLv2
 
 Bizify.me is a service that enables individuals and businesses to easily accept payments for digital products.
