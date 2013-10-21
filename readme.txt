@@ -1,16 +1,16 @@
 ﻿=== Bizify.me ===
 Contributors: bizifyme 
-Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway
+Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway,visa,mastercard
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 1.2
-License: GPLv2
+Tested up to: 3.7
+Stable tag: 1.3
+License: GPLv2 or later
 
-Bizify.me is a service that enables individuals and businesses to easily accept payments for digital products.
+Bizify.me is a complete e-commerce solution with an included payment gateway that supports VISA, MasterCard and mobile payments by SMS.
 
 == Description ==
 
-Bizify.me is a service that enables individuals and businesses to easily accept payments for digital products.
+Bizify.me is a complete e-commerce solution with an included payment gateway that supports VISA, MasterCard and mobile payments by SMS.
 
 You can for example sell your photos, videos, music, e-books, documents or software and you don’t have to run your own business or be a professional in your range to sell your digital products – at Bizify.me everyone is welcome!
 
@@ -60,6 +60,10 @@ Yes, you can! We have an extensive affiliate system and we provide affiliate acc
 == Screenshots ==
 
 == Changelog ==
+
+= 1.3 =
+* Redesign of user interface
+* Tested with WordPress version 3.0 to version 3.7
 
 = 1.2 =
 * Added support for easy connection to Bizify.me account

@@ -5,10 +5,10 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.2
+Version: 1.3
 Author: Bizify.me
 Author URI: https://www.bizify.me
-License: GPL2
+License: GPL2+
 */
 /*
 Copyright 2013 Bizify.me
@@ -48,7 +48,7 @@ if(isset($_GET["html"]))
 	<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
 	<tr valign="middle">
 	<td align="center">
-	<IMG SRC="loader.gif" BORDER="0" WIDTH="32" HEIGHT="32" STYLE="margin-bottom: 10px;" />
+	<IMG SRC="loader.gif" BORDER="0" WIDTH="64" HEIGHT="64" />
 	</td>
 	</tr>
 	</table>
@@ -66,19 +66,19 @@ if(isset($_GET["html"]))
 
 if(!function_exists('add_action'))
 {
-	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+	echo 'Hi there! I\'m just a plugin. Not much I can do when called directly.';
 	exit;
 }
 
-function bizify_script()
+function bizifyme_script()
 {
 	if(is_ssl())
 	{
-		wp_enqueue_script('bizify', 'https://cdn.bizify.me/1.1/', false, null, true);
+		wp_enqueue_script('bizifyme', 'https://cdn.bizify.me/1.1/', false, null, true);
 	}
 	else
 	{
-		wp_enqueue_script('bizify', 'http://js.bizify.me/1.1/', false, null, true);
+		wp_enqueue_script('bizifyme', 'http://js.bizify.me/1.1/', false, null, true);
 	}
 }
 
@@ -161,27 +161,46 @@ function bizifyme_audio_shortcode($attributes, $content = null)
 
 function bizifyme_media_button()
 {
-    print '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="thickbox" title="Sell your digital products using Bizify.me"><img src="' . esc_url( content_url('/plugins/bizifyme/icon.png') ) . '" alt="Add Bizify.me content" /></a>';
+    if(get_bloginfo('version') >= 3.3)
+	{
+		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="button thickbox" data-editor="content" title="' . __('Sell your digital product using Bizify.me', 'bizifyme') . '"><span class="bizifyme-buttons-icon" style="background: url(\'' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '\') no-repeat top left;"></span> ' . __('Sell Product', 'bizifyme') . '</a>';
+	}
+	else
+	{
+		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="thickbox" title="' . __('Sell your digital products using Bizify.me') . '"><img src="' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '" alt="' . __('Sell your digital products using Bizify.me') . '" /></a>';
+	}
 }
 
-function bizifyme_admin_javascript()
+function bizifyme_admin()
 {
-	wp_enqueue_script('tb_position', plugins_url('tb_position.js', __FILE__ ), array('media-upload'));
+	wp_register_style('prefix-style', plugins_url('admin.css', __FILE__));
+	wp_enqueue_style('prefix-style');
+	
+	wp_enqueue_script('bizifyme_admin', plugins_url('admin.js', __FILE__ ), array('media-upload'), null, true);
 }
 
-function bizifyme_stylesheet()
+function bizifyme_wp()
 {
-	wp_register_style('prefix-style', plugins_url('stylesheet.css', __FILE__));
+	wp_register_style('prefix-style', plugins_url('bizifyme.css', __FILE__));
 	wp_enqueue_style('prefix-style');
 }
+	
+function bizifyme_init()
+{
+	load_plugin_textdomain('bizifyme', false, dirname(plugin_basename( __FILE__ )) . '/languages/');
+}
+
+add_action('init', 'bizifyme_init');
+add_action('media_buttons_context',  'bizifyme_media_button');
+
+add_action('admin_enqueue_scripts', 'bizifyme_admin');
+add_action('wp_enqueue_scripts', 'bizifyme_wp');
 
 add_shortcode('BizifyMeImage', 'bizifyme_image_shortcode');
 add_shortcode('BizifyMePlayer', 'bizifyme_player_shortcode');
 add_shortcode('BizifyMeVideo', 'bizifyme_video_shortcode');
 add_shortcode('BizifyMeAudio', 'bizifyme_audio_shortcode');
-add_action('media_buttons_context',  'bizifyme_media_button');
-add_action('admin_enqueue_scripts', 'bizifyme_admin_javascript');
-add_action('wp_enqueue_scripts', 'bizifyme_stylesheet');
-add_action('wp_enqueue_scripts', 'bizify_script', 1000);
+
+add_action('wp_enqueue_scripts', 'bizifyme_script', 1000);
 
 ?>

@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bizify.me\n"
+"POT-Creation-Date: 2013-10-20 23:19+0100\n"
+"PO-Revision-Date: 2013-10-20 23:19+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../bizifyme.php:166
+msgid "Sell your digital product using Bizify.me"
+msgstr "Sälj din digitala produkt via Bizify.me"
+
+#: ../bizifyme.php:166
+msgid "Sell Product"
+msgstr "Sälj produkt"
