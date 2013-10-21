@@ -59,6 +59,14 @@ Yes, you can! We have an extensive affiliate system and we provide affiliate acc
 
 == Screenshots ==
 
+1. Great integration with the WordPress editor!
+2. Detailed statistics of all your sales!
+3. Complete control of your products!
+4. Automatic video encoding with possibility to select cover image!
+5. Share revenue with your friends by percentages!
+6. Pay out your earnings to any bank account worldwide!
+7. Upload images and video clips directly from your iOS or Android device!
+
 == Changelog ==
 
 = 1.3 =
