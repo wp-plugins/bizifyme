@@ -2,8 +2,8 @@
 Contributors: bizifyme 
 Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway,visa,mastercard
 Requires at least: 3.0
-Tested up to: 3.7
-Stable tag: 1.3
+Tested up to: 3.7.1
+Stable tag: 1.4
 License: GPLv2 or later
 
 Bizify.me is a complete e-commerce solution with an included payment gateway that supports VISA, MasterCard and mobile payments by SMS.
@@ -66,8 +66,13 @@ Yes, you can! We have an extensive affiliate system and we provide affiliate acc
 5. Share revenue with your friends by percentages!
 6. Pay out your earnings to any bank account worldwide!
 7. Upload images and video clips directly from your iOS or Android device!
+8. Automatically import products from your Bizify.me account to your WordPress blog.
 
 == Changelog ==
+
+= 1.4 =
+* Automatically import products from your Bizify.me account to your WordPress blog.
+* Tested with WordPress version 3.0 to version 3.7.1
 
 = 1.3 =
 * Redesign of user interface
