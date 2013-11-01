@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4
+Version: 1.4.1
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -185,7 +185,7 @@ class options_bizifyme
 	
 	function admin_menu ()
 	{
-		add_options_page('Bizify.me settings', 'Bizify.me', 'manage_options', 'options_page_bizifyme', array($this, 'settings_page'));
+		add_plugins_page('Bizify.me settings', 'Bizify.me', 'manage_options', 'options_page_bizifyme', array($this, 'settings_page'));
 	}
 	
 	function cron_15minutes($schedules)
@@ -203,8 +203,11 @@ class options_bizifyme
 		
 		if(isset($_POST) && wp_verify_nonce($_POST['bizifyme_nonce'], 'settings_page'))
 		{
+			$selection = $_POST['selection'];
+			if($selection == 'date' && $_POST['history'] == 'on') $selection = 'complete';
+		
 			$settings = array(
-				'selection' => $_POST['selection'],
+				'selection' => $selection,
 				'bizifyme_id' => preg_replace('/[^0-9]/', '', $_POST['bizifyme_id']),
 				'post_status' => $_POST['post_status'],
 				'post_category' =>  $_POST['post_category'],

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2013-10-31 11:38+0100\n"
-"PO-Revision-Date: 2013-10-31 11:39+0100\n"
+"POT-Creation-Date: 2013-11-01 09:41+0100\n"
+"PO-Revision-Date: 2013-11-01 09:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -13,98 +13,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
-
-#: ../bizifyme-ui.php:12
-msgid "Bizify.me settings"
-msgstr "Inställningar Bizify.me"
-
-#: ../bizifyme-ui.php:16
-msgid "Auto import objects"
-msgstr "Importera objekt automatiskt"
-
-#: ../bizifyme-ui.php:17
-msgid ""
-"Automatically import objects from your Bizify.me account to your WordPress "
-"blog every 15 minutes."
-msgstr ""
-"Importera objekt automatiskt från ditt konto på Bizify.me till din WordPress-"
-"blogg var femtonde minut."
-
-#: ../bizifyme-ui.php:21
-msgid "Selection of objects"
-msgstr "Urval av objekt"
-
-#: ../bizifyme-ui.php:23
-msgid "Import only new objects"
-msgstr "Importera enbart nya objekt"
-
-#: ../bizifyme-ui.php:25
-msgid ""
-"Are you sure you want to import all available objects? This can result in a "
-"large number of blog posts if you have many objects saved in your Bizify.me "
-"account."
-msgstr ""
-"Är du helt säker på att du vill importera alla tillgängliga objekt? Om du "
-"har många objekt sparade på ditt konto på Bizify.me, kan detta resultera i "
-"ett stort antal blogginlägg."
-
-#: ../bizifyme-ui.php:25
-msgid "Import all available objects"
-msgstr "Importera alla tillgängliga objekt"
-
-#: ../bizifyme-ui.php:27
-msgid "Disable automatic import"
-msgstr "Avaktivera automatisk importering"
-
-#: ../bizifyme-ui.php:30
-msgid "Bizify.me account ID"
-msgstr "Bizify.me konto-ID"
-
-#: ../bizifyme-ui.php:33
-msgid "What is my account-ID?"
-msgstr "Vad är mitt konto-ID?"
-
-#: ../bizifyme-ui.php:34 ../bizifyme.php:236
-msgid ""
-"You can find your account ID by <A HREF=\"https://bizify.me/login/\" TARGET="
-"\"_blank\">login in to your Bizify.me account</A> and then go to "
-"<EM>Settings</EM> and click on <EM>Automatic publishing</EM>."
-msgstr ""
-"Du kan hitta ditt konto-ID genom att <A HREF=\"https://bizify.me/login/\" "
-"TARGET=\"_blank\">logga in på ditt Bizify.me konto</A> och sedan gå in på "
-"<EM>Inställningar</EM> och klicka på <EM>Automatisk publicering</EM>."
-
-#: ../bizifyme-ui.php:36
-msgid "Post status"
-msgstr "Status blogginlägg"
-
-#: ../bizifyme-ui.php:51
-msgid "Category"
-msgstr "Kategori"
-
-#: ../bizifyme-ui.php:63
-msgid "Author"
-msgstr "Författare"
-
-#: ../bizifyme-ui.php:75
-msgid "Allow comments"
-msgstr "Tillåt kommentarer"
-
-#: ../bizifyme-ui.php:77 ../bizifyme-ui.php:83
-msgid "Yes"
-msgstr "Ja"
-
-#: ../bizifyme-ui.php:79 ../bizifyme-ui.php:85
-msgid "No"
-msgstr "Nej"
-
-#: ../bizifyme-ui.php:81
-msgid "Allow trackbacks and pingbacks"
-msgstr "Tillåt trackbacks och pingbacks"
-
-#: ../bizifyme-ui.php:90
-msgid "Save Changes"
-msgstr "Spara ändringar"
 
 #: ../bizifyme.php:150 ../bizifyme.php:154
 msgid "Sell your digital products using Bizify.me"
@@ -123,13 +31,104 @@ msgid "You do not have sufficient permission to access this page."
 msgstr ""
 "Du har inte tillräcklig behörighet för att få tillgång till denna sida."
 
-#: ../bizifyme.php:228
+#: ../bizifyme.php:231
 msgid "Settings saved."
 msgstr "Inställningar sparade."
 
-#: ../bizifyme.php:236
+#: ../bizifyme.php:239
 msgid "Your Bizify.me account ID is missing."
 msgstr "Ditt Bizify.me konto-ID saknas."
+
+#: ../bizifyme.php:239 ../bizifyme-ui.php:42
+msgid ""
+"You can find your account ID by <A HREF=\"https://bizify.me/login/\" TARGET="
+"\"_blank\">login in to your Bizify.me account</A> and then go to "
+"<EM>Settings</EM> and click on <EM>Automatic publishing</EM>."
+msgstr ""
+"Du kan hitta ditt konto-ID genom att <A HREF=\"https://bizify.me/login/\" "
+"TARGET=\"_blank\">logga in på ditt Bizify.me konto</A> och sedan gå in på "
+"<EM>Inställningar</EM> och klicka på <EM>Automatisk publicering</EM>."
+
+#: ../bizifyme-ui.php:12
+msgid ""
+"Are you sure you want to include all previously saved objects? This can "
+"result in a large number of blog posts if you have many objects saved in "
+"your Bizify.me account."
+msgstr ""
+"Är du helt säker på att du vill importera alla tidigare sparade objekt? Om "
+"du har många objekt sparade på ditt konto på Bizify.me, kan detta resultera "
+"i ett stort antal blogginlägg."
+
+#: ../bizifyme-ui.php:24
+msgid ""
+"Automatically import objects from your Bizify.me account to your WordPress "
+"blog every 15 minutes."
+msgstr ""
+"Importera objekt automatiskt från ditt konto på Bizify.me till din WordPress-"
+"blogg var femtonde minut."
+
+#: ../bizifyme-ui.php:28
+msgid "Auto import objects"
+msgstr "Importera objekt automatiskt"
+
+#: ../bizifyme-ui.php:30 ../bizifyme-ui.php:85 ../bizifyme-ui.php:91
+msgid "Yes"
+msgstr "Ja"
+
+#: ../bizifyme-ui.php:32 ../bizifyme-ui.php:87 ../bizifyme-ui.php:93
+msgid "No"
+msgstr "Nej"
+
+#: ../bizifyme-ui.php:36
+msgid "Include previously saved objects"
+msgstr "Inkludera tidigare sparade objekt"
+
+#: ../bizifyme-ui.php:38
+msgid "Bizify.me account ID"
+msgstr "Bizify.me konto-ID"
+
+#: ../bizifyme-ui.php:41
+msgid "What is my account-ID?"
+msgstr "Vad är mitt konto-ID?"
+
+#: ../bizifyme-ui.php:44
+msgid "Post status"
+msgstr "Status blogginlägg"
+
+#: ../bizifyme-ui.php:59
+msgid "Category"
+msgstr "Kategori"
+
+#: ../bizifyme-ui.php:71
+msgid "Author"
+msgstr "Författare"
+
+#: ../bizifyme-ui.php:83
+msgid "Allow comments"
+msgstr "Tillåt kommentarer"
+
+#: ../bizifyme-ui.php:89
+msgid "Allow trackbacks and pingbacks"
+msgstr "Tillåt trackbacks och pingbacks"
+
+#: ../bizifyme-ui.php:98
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+#~ msgid "Bizify.me settings"
+#~ msgstr "Inställningar Bizify.me"
+
+#~ msgid "Selection of objects"
+#~ msgstr "Urval av objekt"
+
+#~ msgid "Import only new objects"
+#~ msgstr "Importera enbart nya objekt"
+
+#~ msgid "Import all available objects"
+#~ msgstr "Importera alla tillgängliga objekt"
+
+#~ msgid "Disable automatic import"
+#~ msgstr "Avaktivera automatisk importering"
 
 #~ msgid ""
 #~ "Your Bizify.me account ID is missing. You can find your Bizify.me account "
