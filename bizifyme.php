@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.1
+Version: 1.4.2
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -277,7 +277,7 @@ class options_bizifyme
 								'post_category' 	=> array($options['settings']['post_category']),
 								'comment_status'	=> $options['settings']['comment_status'],
 								'ping_status'	=> $options['settings']['ping_status'],
-								'post_date'		=> date("Y-m-d H:i:s", strtotime($item->get_date('Y-m-d H:i:s')))
+								'post_date'		=> get_date_from_gmt($item->get_date('Y-m-d H:i:s'), "Y-m-d H:i:s")
 							);
 							
 							$post_id = wp_insert_post($new_post);
