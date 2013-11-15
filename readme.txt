@@ -29,6 +29,8 @@ Do not forget to also read our *[FAQ page](http://wordpress.org/plugins/bizifyme
 1. Upload 'bizify.php' to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
+Please note that Bizify.me is not compatible with the WordPress plugin Lazy Load due to the way Lazy Load rewrites the image HTML-tags in your WordPress blog.
+
 == Frequently Asked Questions ==
 
 = Do I need to do anything else except to install the plugin and create an account on Bizify.me? =
