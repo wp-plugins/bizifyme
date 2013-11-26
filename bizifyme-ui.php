@@ -31,16 +31,22 @@ function bizifyme_warning()
 	<br />
 	<label><input type="radio" id="selection" name="selection" value="none" <?php echo($options['settings']['selection'] == 'none' || $options['settings']['selection'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
 
-</td></tr><tr valign="top"><th scope="row"></th><td>
-	
-	<label><input type="checkbox" id="history" name="history" onClick="return bizifyme_warning();" <?php echo($options['settings']['selection'] == 'complete' ? 'checked="checked"' : ''); ?> /> <?php _e('Include previously saved objects', 'bizifyme'); ?></label>
+</td></tr><tr valign="top"><th scope="row"><?php _e('Uploaded from what devices', 'bizifyme'); ?></th><td>
 
+	<label><input type="radio" id="device" name="device" value="mobile" <?php echo($options['settings']['device'] == 'mobile' || $options['settings']['device'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Only from my Android / iPhone / iPad', 'bizifyme'); ?></label>
+	<br />
+	<label><input type="radio" id="device" name="device" value="desktop,mobile" <?php echo($options['settings']['device'] == 'desktop,mobile' ? 'checked="checked"' : ''); ?> /> <?php _e('My computer and my Android / iPhone / iPad', 'bizifyme'); ?></label>
+
+	</td></tr><tr valign="top"><th scope="row"></th><td>
+	
+	<label><input type="checkbox" id="history" name="history" onClick="return bizifyme_warning();" <?php echo($options['settings']['selection'] == 'complete' ? 'checked="checked"' : ''); ?> /> <?php _e('Include previously uploaded objects', 'bizifyme'); ?></label>
+	
 </td></tr><tr valign="top"><th scope="row"><?php _e('Bizify.me account ID', 'bizifyme'); ?></th><td>
 
 	<input name="bizifyme_id" id="bizifyme_id" type="text" type="number" maxlength="10" class="c2c-short_text" value="<?php echo $options['settings']['bizifyme_id']; ?>" /><BR />
 	<DIV style="display: inline; font-size: 90%;" id="help-link"><A HREF="#" onClick="bizifyme_help();"><?php _e('What is my account-ID?', 'bizifyme'); ?></A></DIV>
 	<DIV style="display: none; font-size: 90%;" id="help-text"><?php _e('You can find your account ID by <A HREF="https://bizify.me/login/" TARGET="_blank">login in to your Bizify.me account</A> and then go to <EM>Settings</EM> and click on <EM>Automatic publishing</EM>.', 'bizifyme') ?></DIV>
-	
+
 </td></tr><tr valign="top"><th scope="row"><?php _e('Post status', 'bizifyme'); ?></th><td>
 
 	<select name="post_status" id="post_status">
@@ -101,3 +107,4 @@ function bizifyme_warning()
 
 </form>
 </div>
+

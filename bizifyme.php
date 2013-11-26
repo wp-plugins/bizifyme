@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.3
+Version: 1.4.4
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -209,6 +209,7 @@ class options_bizifyme
 			$settings = array(
 				'selection' => $selection,
 				'bizifyme_id' => preg_replace('/[^0-9]/', '', $_POST['bizifyme_id']),
+				'device' => $_POST['device'],
 				'post_status' => $_POST['post_status'],
 				'post_category' =>  $_POST['post_category'],
 				'post_author' => $_POST['post_author'],
@@ -256,7 +257,7 @@ class options_bizifyme
 		{
 			add_filter('wp_feed_cache_transient_lifetime', create_function('$a', 'return 0;'));
 			
-			$rss = fetch_feed('http://bizify.me/feed/shortcode/' . $options['settings']['bizifyme_id']);
+			$rss = fetch_feed('http://bizify.me/feed/wordpress/' . $options['settings']['bizifyme_id']);
 			
 			if(!is_wp_error($rss))
 			{
@@ -269,19 +270,22 @@ class options_bizifyme
 					{
 						if($options['settings']['selection'] == 'complete' || strtotime($item->get_date('Y-m-d H:i:s')) >= strtotime($options['settings']['latest_import']))
 						{
-							$new_post = array(
-								'post_title'    	=> $item->get_title(),
-								'post_content'  	=> $item->get_content() != "" ? $item->get_content() : $item->get_description(),
-								'post_status'   	=> $options['settings']['post_status'],
-								'post_author'   	=> $options['settings']['post_author'],
-								'post_category' 	=> array($options['settings']['post_category']),
-								'comment_status'	=> $options['settings']['comment_status'],
-								'ping_status'	=> $options['settings']['ping_status'],
-								'post_date'		=> get_date_from_gmt($item->get_date('Y-m-d H:i:s'), "Y-m-d H:i:s")
-							);
-							
-							$post_id = wp_insert_post($new_post);
-							add_post_meta($post_id, 'bizifyme_permalink', esc_url($item->get_permalink()));
+							if( (stripos($options['settings']['device'], $item->get_category()->get_label()) !== false) || ($options['settings']['device'] == '' AND $item->get_category()->get_label() == "mobile") )
+							{
+								$new_post = array(
+									'post_title'    	=> $item->get_title(),
+									'post_content'  	=> $item->get_content() != "" ? $item->get_content() : $item->get_description(),
+									'post_status'   	=> $options['settings']['post_status'],
+									'post_author'   	=> $options['settings']['post_author'],
+									'post_category' 	=> array($options['settings']['post_category']),
+									'comment_status'	=> $options['settings']['comment_status'],
+									'ping_status'	=> $options['settings']['ping_status'],
+									'post_date'		=> get_date_from_gmt($item->get_date('Y-m-d H:i:s'), "Y-m-d H:i:s")
+								);
+								
+								$post_id = wp_insert_post($new_post);
+								add_post_meta($post_id, 'bizifyme_permalink', esc_url($item->get_permalink()));
+							}
 						}
 					}
 				}

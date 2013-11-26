@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2013-11-01 09:41+0100\n"
-"PO-Revision-Date: 2013-11-01 09:42+0100\n"
+"POT-Creation-Date: 2013-11-26 14:41+0100\n"
+"PO-Revision-Date: 2013-11-26 14:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -31,15 +31,15 @@ msgid "You do not have sufficient permission to access this page."
 msgstr ""
 "Du har inte tillräcklig behörighet för att få tillgång till denna sida."
 
-#: ../bizifyme.php:231
+#: ../bizifyme.php:232
 msgid "Settings saved."
 msgstr "Inställningar sparade."
 
-#: ../bizifyme.php:239
+#: ../bizifyme.php:240
 msgid "Your Bizify.me account ID is missing."
 msgstr "Ditt Bizify.me konto-ID saknas."
 
-#: ../bizifyme.php:239 ../bizifyme-ui.php:42
+#: ../bizifyme.php:240 ../bizifyme-ui.php:48
 msgid ""
 "You can find your account ID by <A HREF=\"https://bizify.me/login/\" TARGET="
 "\"_blank\">login in to your Bizify.me account</A> and then go to "
@@ -71,47 +71,59 @@ msgstr ""
 msgid "Auto import objects"
 msgstr "Importera objekt automatiskt"
 
-#: ../bizifyme-ui.php:30 ../bizifyme-ui.php:85 ../bizifyme-ui.php:91
+#: ../bizifyme-ui.php:30 ../bizifyme-ui.php:91 ../bizifyme-ui.php:97
 msgid "Yes"
 msgstr "Ja"
 
-#: ../bizifyme-ui.php:32 ../bizifyme-ui.php:87 ../bizifyme-ui.php:93
+#: ../bizifyme-ui.php:32 ../bizifyme-ui.php:93 ../bizifyme-ui.php:99
 msgid "No"
 msgstr "Nej"
 
+#: ../bizifyme-ui.php:34
+msgid "Uploaded from what devices"
+msgstr "Uppladdad från vilka enheter"
+
 #: ../bizifyme-ui.php:36
-msgid "Include previously saved objects"
-msgstr "Inkludera tidigare sparade objekt"
+msgid "Only from my Android / iPhone / iPad"
+msgstr "Endast från min Android / iPhone / iPad"
 
 #: ../bizifyme-ui.php:38
+msgid "My computer and my Android / iPhone / iPad"
+msgstr "Min dator och min Android / iPhone / iPad"
+
+#: ../bizifyme-ui.php:42
+msgid "Include previously uploaded objects"
+msgstr "Inkludera tidigare uppladdade objekt"
+
+#: ../bizifyme-ui.php:44
 msgid "Bizify.me account ID"
 msgstr "Bizify.me konto-ID"
 
-#: ../bizifyme-ui.php:41
+#: ../bizifyme-ui.php:47
 msgid "What is my account-ID?"
 msgstr "Vad är mitt konto-ID?"
 
-#: ../bizifyme-ui.php:44
+#: ../bizifyme-ui.php:50
 msgid "Post status"
 msgstr "Status blogginlägg"
 
-#: ../bizifyme-ui.php:59
+#: ../bizifyme-ui.php:65
 msgid "Category"
 msgstr "Kategori"
 
-#: ../bizifyme-ui.php:71
+#: ../bizifyme-ui.php:77
 msgid "Author"
 msgstr "Författare"
 
-#: ../bizifyme-ui.php:83
+#: ../bizifyme-ui.php:89
 msgid "Allow comments"
 msgstr "Tillåt kommentarer"
 
-#: ../bizifyme-ui.php:89
+#: ../bizifyme-ui.php:95
 msgid "Allow trackbacks and pingbacks"
 msgstr "Tillåt trackbacks och pingbacks"
 
-#: ../bizifyme-ui.php:98
+#: ../bizifyme-ui.php:104
 msgid "Save Changes"
 msgstr "Spara ändringar"
 
