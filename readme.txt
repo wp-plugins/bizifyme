@@ -29,6 +29,8 @@ Do not forget to also read our *[FAQ page](http://wordpress.org/plugins/bizifyme
 1. Upload 'bizify.php' to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
+If you use the Bizify.me plugin together with the Infinite Scroll plugin, please add <EM>BizifyConvertLinks();</EM> to the callback section of Infinite Scroll.
+
 Please note that Bizify.me is not compatible with the WordPress plugin Lazy Load due to the way Lazy Load rewrites the image HTML-tags in your WordPress blog.
 
 == Frequently Asked Questions ==
@@ -45,7 +47,7 @@ No, you do not need a PayPal account or any other account at a payment gateway. 
 
 Bizify.me also handle all payments to your bank account and we can do a bank transfer to almost all countries worldwide.
 
-= I still don't get it! Do you have any other FAQ page?  =
+= I still don't get it! Do you have any other FAQ page? =
 
 Yes, we do. You can find our regular FAQ page at: <https://www.bizify.me/help/>
 
@@ -58,6 +60,10 @@ Yes, you can. You can get in contact with us at: <https://www.bizify.me/contact/
 = All right. I think I'm beginning to understand what Bizify.me offers. Can I also become an affiliate to Bizify.me? =
 
 Yes, you can! We have an extensive affiliate system and we provide affiliate accounts to individual users and also, for example, to operators of large blog network. Please [contact us](https://www.bizify.me/contact/) and we'll find a deal that we both feel satisfied with!
+
+= Can I use Bizify.me together with Infinite Scroll? >
+
+Yes, you can! But if you do, please remember to add <EM>BizifyConvertLinks();</EM> to the callback section of Infinite Scroll.
 
 == Screenshots ==
 
