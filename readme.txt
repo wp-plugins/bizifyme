@@ -61,7 +61,7 @@ Yes, you can. You can get in contact with us at: <https://www.bizify.me/contact/
 
 Yes, you can! We have an extensive affiliate system and we provide affiliate accounts to individual users and also, for example, to operators of large blog network. Please [contact us](https://www.bizify.me/contact/) and we'll find a deal that we both feel satisfied with!
 
-= Can I use Bizify.me together with Infinite Scroll? >
+= Can I use Bizify.me together with Infinite Scroll? =
 
 Yes, you can! But if you do, please remember to add <EM>BizifyConvertLinks();</EM> to the callback section of Infinite Scroll.
 
