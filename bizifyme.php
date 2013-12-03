@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.4
+Version: 1.4.5
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -75,7 +75,7 @@ function bizifyme_image_shortcode($attributes, $content = null)
 	$class = '';
 	$style = '';
 	
-    extract(shortcode_atts(array('src' => '', 'alt' => 'Bizify.me image','width' => '', 'height' => '', 'class' => '', 'style' => ''), $attributes));
+    extract(shortcode_atts(array('src' => '', 'alt' => '', 'width' => '', 'height' => '', 'class' => '', 'style' => ''), $attributes));
 	
 	if(is_ssl())
 	{
@@ -147,7 +147,7 @@ function bizifyme_media_button()
 {
     if(get_bloginfo('version') >= 3.3)
 	{
-		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="button thickbox" data-editor="content" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><span class="bizifyme-buttons-icon" style="background: url(\'' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '\') no-repeat top left;"></span> ' . __('Sell Product', 'bizifyme') . '</a>';
+		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="button thickbox" data-editor="content" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><span class="bizifyme-buttons-icon" style="background: url(\'' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '\') no-repeat top left;"></span> ' . __('Sell Media / Product', 'bizifyme') . '</a>';
 	}
 	else
 	{
