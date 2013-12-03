@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2013-11-26 14:41+0100\n"
-"PO-Revision-Date: 2013-11-26 14:43+0100\n"
+"POT-Creation-Date: 2013-12-03 11:32+0100\n"
+"PO-Revision-Date: 2013-12-03 11:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -19,8 +19,8 @@ msgid "Sell your digital products using Bizify.me"
 msgstr "Sälj dina digitala produkter via Bizify.me"
 
 #: ../bizifyme.php:150
-msgid "Sell Product"
-msgstr "Sälj produkt"
+msgid "Sell Media / Product"
+msgstr "Sälj media / produkt"
 
 #: ../bizifyme.php:193
 msgid "Every 15 Minutes"
