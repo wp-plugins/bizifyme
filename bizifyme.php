@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.5
+Version: 1.4.6
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -38,7 +38,7 @@ if(isset($_GET["html"]))
 	</table>
 
 	<script type="text/javascript">
-	window.top.send_to_editor('<p><?php echo preg_replace("/\r|\n/", "", $_GET['html']) ?></p>');
+	window.top.send_to_editor('<?php echo preg_replace("/\r|\n/", "", $_GET['html']) ?>');
 	</script>
 
 	</BODY>
