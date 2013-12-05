@@ -38,7 +38,7 @@ if(isset($_GET["html"]))
 	</table>
 
 	<script type="text/javascript">
-	window.top.send_to_editor("<?php echo preg_replace("/\r|\n/", "", $_GET['html']) ?>");
+	window.top.send_to_editor('<?php echo preg_replace("/\r|\n/", "", $_GET['html']) ?>');
 	</script>
 
 	</BODY>
