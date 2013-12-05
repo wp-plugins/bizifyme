@@ -5,11 +5,13 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.6
+Version: 1.4.7
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
+
+$plugin_version = '1.4.7';
 
 if(isset($_GET["html"]))
 { 
@@ -145,13 +147,15 @@ function bizifyme_audio_shortcode($attributes, $content = null)
 
 function bizifyme_media_button()
 {
+	global $plugin_version;
+
     if(get_bloginfo('version') >= 3.3)
 	{
-		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="button thickbox" data-editor="content" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><span class="bizifyme-buttons-icon" style="background: url(\'' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '\') no-repeat top left;"></span> ' . __('Sell Media / Product', 'bizifyme') . '</a>';
+		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&version=' . $plugin_version . '&TB_iframe=true') . '" class="button thickbox" data-editor="content" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><span class="bizifyme-buttons-icon" style="background: url(\'' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '\') no-repeat top left;"></span> ' . __('Sell Media / Product', 'bizifyme') . '</a>';
 	}
 	else
 	{
-		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&TB_iframe=true') . '" class="thickbox" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><img src="' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '" alt="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '" /></a>';
+		echo '<a href="' . esc_url('https://bizify.me/login/?callback=' . urlencode(plugins_url('bizifyme.php', __FILE__ )) . '&shortcode=true&version=' . $plugin_version . '&TB_iframe=true') . '" class="thickbox" title="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '"><img src="' . esc_url( plugins_url('icon.png', __FILE__ ) ) . '" alt="' . __('Sell your digital products using Bizify.me', 'bizifyme') . '" /></a>';
 	}
 }
 
@@ -250,6 +254,8 @@ class options_bizifyme
 		
 	function import_feed()
 	{
+		global $plugin_version;
+	
 		include_once(ABSPATH . WPINC . '/feed.php');
 		$options = get_option('bizifyme_options');
 		
@@ -257,7 +263,7 @@ class options_bizifyme
 		{
 			add_filter('wp_feed_cache_transient_lifetime', create_function('$a', 'return 0;'));
 			
-			$rss = fetch_feed('http://bizify.me/feed/wordpress/' . $options['settings']['bizifyme_id']);
+			$rss = fetch_feed('http://bizify.me/feed/wordpress/' . $options['settings']['bizifyme_id'] . '?version=' . $plugin_version);
 			
 			if(!is_wp_error($rss))
 			{
