@@ -11,7 +11,7 @@ Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
 
-$plugin_version = '1.4.7';
+$plugin_version = '1.4.8';
 
 if(isset($_GET["html"]))
 { 
