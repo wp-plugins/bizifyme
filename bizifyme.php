@@ -106,7 +106,7 @@ function bizifyme_player_shortcode($attributes, $content = null)
 	
     if($width > 0 && $height > 0)
 	{
-		return '<div class="BizifyMeContent" style="max-width: ' . $width . 'px;"><div class="BizifyMeIframe" style="padding-bottom: ' . str_replace(",", ".", round($height / $width * 100, 2)) . '%;"><iframe src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '"></iframe></div></div>';
+		return '<p><div class="BizifyMeContent" style="max-width: ' . $width . 'px;"><div class="BizifyMeIframe" style="padding-bottom: ' . str_replace(",", ".", round($height / $width * 100, 2)) . '%;"><iframe src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '"></iframe></div></div></p>';
 	}
 	else
 	{
