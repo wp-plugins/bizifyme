@@ -78,6 +78,9 @@ Yes, you can! But if you do, please remember to add <EM>BizifyConvertLinks();</E
 
 == Changelog ==
 
+= 1.4.8 =
+* Better handling of aspect ration in the video player.
+
 = 1.4.7 =
 * Added information about what version the plugin is running.
 
