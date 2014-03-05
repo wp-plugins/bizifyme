@@ -3,7 +3,7 @@ video[src*="bizify.me"] { max-width: 100%; height: auto; }
 audio[src*="bizify.me"] { max-width: 100%; height: auto; }
 iframe[src*="bizify.me"] { max-width: 100%; }
 
-.BizifyMeContent { margin-left: auto; margin-right: auto; }
+.BizifyMeContent { margin-left: auto; margin-right: auto; margin-bottom: 8px; }
 .BizifyMeIframe { position: relative; }
 .BizifyMeIframe iframe { position: absolute; top: 0px; left: 0px; height: 100%; }
 .BizifyMeIframe img { position: absolute; top: 0px; left: 0px; height: 100%; }
