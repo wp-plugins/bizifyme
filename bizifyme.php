@@ -5,7 +5,7 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.7
+Version: 1.4.8
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
@@ -104,7 +104,14 @@ function bizifyme_player_shortcode($attributes, $content = null)
 		$src = str_replace("http://cdn.bizify.me", "https://cdn.bizify.me", $src);
 	}
 	
-    return '<iframe src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '"></iframe>';
+    if($width > 0 && $height > 0)
+	{
+		return '<div class="BizifyMeContent" style="max-width: ' . $width . 'px;"><div class="BizifyMeIframe" style="padding-bottom: ' . str_replace(",", ".", round($height / $width * 100, 2)) . '%;"><iframe src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '"></iframe></div></div>';
+	}
+	else
+	{
+		return '<iframe src="' . $src . '" width="' . $width . '" height="' . $height . '" class="' . $class . '" style="' . $style . '"></iframe>';
+	}
 }
 
 function bizifyme_video_shortcode($attributes, $content = null)

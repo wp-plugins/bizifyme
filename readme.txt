@@ -3,7 +3,7 @@ Contributors: bizifyme
 Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway,visa,mastercard
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 1.4.7
+Stable tag: 1.4.8
 License: GPLv2 or later
 
 Bizify.me is a complete e-commerce solution with an included payment gateway that supports VISA, MasterCard and mobile payments by SMS.
