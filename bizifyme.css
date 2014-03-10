@@ -1,4 +1,4 @@
-img[src*="bizify.me"] { width: auto; max-width: 100%; height: auto; }
+img[src*="bizify.me"] { max-width: 100%; height: auto; }
 video[src*="bizify.me"] { max-width: 100%; height: auto; }
 audio[src*="bizify.me"] { max-width: 100%; height: auto; }
 iframe[src*="bizify.me"] { max-width: 100%; }
