@@ -24,6 +24,13 @@ To create a new merchant account, visit: <https://www.bizify.me/wordpress/>
 
 Do not forget to also read our *[FAQ page](http://wordpress.org/plugins/bizifyme/faq/)*. 
 
+The handle your account on your mobile device, install the *[iPhone/iPad app](https://itunes.apple.com/en/app/bizify.me/id635602512)*, *[Android app](https://play.google.com/store/apps/details?id=me.bizify.application&hl=en)* or the *[Windows Phone app](http://www.windowsphone.com/en-us/store/app/bizify-me/c7d52fed-b65b-4047-905d-cec385ce0ee1)*.
+
+You are also welcome to follow us on *[Facebook](https://www.facebook.com/bizify.me)*, *[Twitter](https://twitter.com/bizifyme)* or *[Google+](https://www.google.com/+BizifyMe)*.
+
+[youtube http://youtu.be/qoUeZrFgbXA]
+A short tutorial how you install Bizify.me as a WordPress plugin.
+
 == Installation ==
 
 1. Upload 'bizify.php' to the '/wp-content/plugins/' directory.
