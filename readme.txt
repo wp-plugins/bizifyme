@@ -10,6 +10,8 @@ Bizify.me is a complete e-commerce solution with an included payment gateway tha
 
 == Description ==
 
+[youtube http://www.youtube.com/watch?v=qoUeZrFgbXA]
+
 Bizify.me is a complete e-commerce solution with an included payment gateway that supports VISA, MasterCard and mobile payments by SMS.
 
 You can for example sell your photos, videos, music, e-books, documents or software and you don’t have to run your own business or be a professional in your range to sell your digital products – at Bizify.me everyone is welcome!
@@ -27,9 +29,6 @@ Do not forget to also read our *[FAQ page](http://wordpress.org/plugins/bizifyme
 The handle your account on your mobile device, install the *[iPhone/iPad app](https://itunes.apple.com/en/app/bizify.me/id635602512)*, *[Android app](https://play.google.com/store/apps/details?id=me.bizify.application&hl=en)* or the *[Windows Phone app](http://www.windowsphone.com/en-us/store/app/bizify-me/c7d52fed-b65b-4047-905d-cec385ce0ee1)*.
 
 You are also welcome to follow us on *[Facebook](https://www.facebook.com/bizify.me)*, *[Twitter](https://twitter.com/bizifyme)* or *[Google+](https://www.google.com/+BizifyMe)*.
-
-[youtube http://www.youtube.com/watch?v=qoUeZrFgbXA]
-A short tutorial how you install Bizify.me as a WordPress plugin.
 
 == Installation ==
 
