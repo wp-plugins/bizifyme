@@ -28,7 +28,7 @@ The handle your account on your mobile device, install the *[iPhone/iPad app](ht
 
 You are also welcome to follow us on *[Facebook](https://www.facebook.com/bizify.me)*, *[Twitter](https://twitter.com/bizifyme)* or *[Google+](https://www.google.com/+BizifyMe)*.
 
-[youtube http://youtu.be/qoUeZrFgbXA]
+[youtube http://www.youtube.com/watch?v=qoUeZrFgbXA]
 A short tutorial how you install Bizify.me as a WordPress plugin.
 
 == Installation ==
