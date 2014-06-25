@@ -5,13 +5,13 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.9
+Version: 1.4.10
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
 
-$plugin_version = '1.4.9';
+$plugin_version = '1.4.10';
 
 if(isset($_GET["html"]))
 { 
@@ -270,7 +270,7 @@ class options_bizifyme
 		{
 			add_filter('wp_feed_cache_transient_lifetime', create_function('$a', 'return 0;'));
 			
-			$rss = fetch_feed('http://bizify.me/feed/wordpress/' . $options['settings']['bizifyme_id'] . '?version=' . $plugin_version);
+			$rss = fetch_feed('http://bizify.me/feed/wordpress/' . $options['settings']['bizifyme_id'] . '?selection=' . $options['settings']['selection'] . '&version=' . $plugin_version);
 			
 			if(!is_wp_error($rss))
 			{
