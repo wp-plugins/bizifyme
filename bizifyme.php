@@ -5,13 +5,13 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.10
+Version: 1.4.11
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
 
-$plugin_version = '1.4.10';
+$plugin_version = '1.4.11';
 
 if(isset($_GET["html"]))
 { 
@@ -302,6 +302,8 @@ class options_bizifyme
 						}
 					}
 				}
+				
+				if($options['settings']['selection'] == 'complete') $options['settings']['selection'] = 'date';
 				
 				$options['settings']['latest_import'] = gmdate("Y-m-d H:i:s");
 				update_option('bizifyme_options', $options);
