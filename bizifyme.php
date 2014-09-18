@@ -5,13 +5,13 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.12
+Version: 1.4.13
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
 
-$plugin_version = '1.4.12';
+$plugin_version = '1.4.13';
 
 if(isset($_GET["html"]))
 { 
@@ -56,11 +56,11 @@ if(!function_exists('add_action'))
 	exit;
 }
 
-function bizifyme_async($url)
+function bizifyme_defer($url)
 {
     if(strpos($url, '//js.bizify.me/1.1/') !== false or strpos($url, '//cdn.bizify.me/1.1/') !== false)
     {
-		return "$url' async='async";
+		return "$url' defer='defer";
     }
     else
 	{
@@ -399,7 +399,7 @@ add_shortcode('BizifyMePlayer', 'bizifyme_player_shortcode');
 add_shortcode('BizifyMeVideo', 'bizifyme_video_shortcode');
 add_shortcode('BizifyMeAudio', 'bizifyme_audio_shortcode');
 
-add_filter('clean_url', 'bizifyme_async');
+add_filter('clean_url', 'bizifyme_defer');
 add_action('wp_enqueue_scripts', 'bizifyme_script', 1000);
 
 ?>
