@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2014-11-08 10:44+0100\n"
-"PO-Revision-Date: 2014-11-08 10:45+0100\n"
+"POT-Creation-Date: 2014-11-10 19:55+0100\n"
+"PO-Revision-Date: 2014-11-10 19:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -34,20 +34,24 @@ msgstr "Inställningar"
 msgid "Every 15 Minutes"
 msgstr "Var 15:de minut"
 
-#: ../bizifyme.php:232
+#: ../bizifyme.php:226
+msgid "Getting started with Bizify.me"
+msgstr "Komma igång med Bizify.me"
+
+#: ../bizifyme.php:236
 msgid "You do not have sufficient permission to access this page."
 msgstr ""
 "Du har inte tillräcklig behörighet för att få tillgång till denna sida."
 
-#: ../bizifyme.php:263
+#: ../bizifyme.php:267
 msgid "Settings saved."
 msgstr "Inställningar sparade."
 
-#: ../bizifyme.php:271
+#: ../bizifyme.php:275
 msgid "Your Bizify.me account ID is missing."
 msgstr "Ditt Bizify.me konto-ID saknas."
 
-#: ../bizifyme.php:271 ../bizifyme-ui.php:67
+#: ../bizifyme.php:275 ../bizifyme-ui.php:67
 msgid ""
 "You can find your account ID by <A HREF=\"https://bizify.me/login/\" TARGET="
 "\"_blank\">login in to your Bizify.me account</A> and then go to "
