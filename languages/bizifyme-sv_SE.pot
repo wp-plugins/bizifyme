@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2013-12-03 11:32+0100\n"
-"PO-Revision-Date: 2013-12-03 11:32+0100\n"
+"POT-Creation-Date: 2014-11-08 10:44+0100\n"
+"PO-Revision-Date: 2014-11-08 10:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -14,32 +14,40 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../bizifyme.php:150 ../bizifyme.php:154
+#: ../bizifyme.php:173 ../bizifyme.php:177
 msgid "Sell your digital products using Bizify.me"
 msgstr "Sälj dina digitala produkter via Bizify.me"
 
-#: ../bizifyme.php:150
+#: ../bizifyme.php:173
 msgid "Sell Media / Product"
 msgstr "Sälj media / produkt"
 
-#: ../bizifyme.php:193
+#: ../bizifyme.php:212
+msgid "Getting started"
+msgstr "Komma igång"
+
+#: ../bizifyme.php:213
+msgid "Settings"
+msgstr "Inställningar"
+
+#: ../bizifyme.php:218
 msgid "Every 15 Minutes"
 msgstr "Var 15:de minut"
 
-#: ../bizifyme.php:201
+#: ../bizifyme.php:232
 msgid "You do not have sufficient permission to access this page."
 msgstr ""
 "Du har inte tillräcklig behörighet för att få tillgång till denna sida."
 
-#: ../bizifyme.php:232
+#: ../bizifyme.php:263
 msgid "Settings saved."
 msgstr "Inställningar sparade."
 
-#: ../bizifyme.php:240
+#: ../bizifyme.php:271
 msgid "Your Bizify.me account ID is missing."
 msgstr "Ditt Bizify.me konto-ID saknas."
 
-#: ../bizifyme.php:240 ../bizifyme-ui.php:48
+#: ../bizifyme.php:271 ../bizifyme-ui.php:67
 msgid ""
 "You can find your account ID by <A HREF=\"https://bizify.me/login/\" TARGET="
 "\"_blank\">login in to your Bizify.me account</A> and then go to "
@@ -49,17 +57,17 @@ msgstr ""
 "TARGET=\"_blank\">logga in på ditt Bizify.me konto</A> och sedan gå in på "
 "<EM>Inställningar</EM> och klicka på <EM>Automatisk publicering</EM>."
 
-#: ../bizifyme-ui.php:12
+#: ../bizifyme-ui.php:15
 msgid ""
-"Are you sure you want to include all previously saved objects? This can "
-"result in a large number of blog posts if you have many objects saved in "
-"your Bizify.me account."
+"Are you sure you want to import all previously uploaded objects? If you have "
+"uploaded many objects to your Bizify.me account this can result in a large "
+"number of new blog posts."
 msgstr ""
-"Är du helt säker på att du vill importera alla tidigare sparade objekt? Om "
-"du har många objekt sparade på ditt konto på Bizify.me, kan detta resultera "
-"i ett stort antal blogginlägg."
+"Är du helt säker på att du vill importera alla tidigare uppladdade objekt? "
+"Om du har laddat upp många objekt till ditt konto på Bizify.me kan detta "
+"resultera i ett stort antal nya blogginlägg."
 
-#: ../bizifyme-ui.php:24
+#: ../bizifyme-ui.php:34
 msgid ""
 "Automatically import objects from your Bizify.me account to your WordPress "
 "blog every 15 minutes."
@@ -67,65 +75,75 @@ msgstr ""
 "Importera objekt automatiskt från ditt konto på Bizify.me till din WordPress-"
 "blogg var femtonde minut."
 
-#: ../bizifyme-ui.php:28
+#: ../bizifyme-ui.php:38 ../bizifyme-ui.php:41
 msgid "Auto import objects"
 msgstr "Importera objekt automatiskt"
 
-#: ../bizifyme-ui.php:30 ../bizifyme-ui.php:91 ../bizifyme-ui.php:97
+#: ../bizifyme-ui.php:42 ../bizifyme-ui.php:112 ../bizifyme-ui.php:121
 msgid "Yes"
 msgstr "Ja"
 
-#: ../bizifyme-ui.php:32 ../bizifyme-ui.php:93 ../bizifyme-ui.php:99
+#: ../bizifyme-ui.php:44 ../bizifyme-ui.php:114 ../bizifyme-ui.php:123
 msgid "No"
 msgstr "Nej"
 
-#: ../bizifyme-ui.php:34
+#: ../bizifyme-ui.php:47 ../bizifyme-ui.php:50
 msgid "Uploaded from what devices"
 msgstr "Uppladdad från vilka enheter"
 
-#: ../bizifyme-ui.php:36
+#: ../bizifyme-ui.php:51
 msgid "Only from my Android / iPhone / iPad"
 msgstr "Endast från min Android / iPhone / iPad"
 
-#: ../bizifyme-ui.php:38
+#: ../bizifyme-ui.php:53
 msgid "My computer and my Android / iPhone / iPad"
 msgstr "Min dator och min Android / iPhone / iPad"
 
-#: ../bizifyme-ui.php:42
-msgid "Include previously uploaded objects"
-msgstr "Inkludera tidigare uppladdade objekt"
+#: ../bizifyme-ui.php:59 ../bizifyme-ui.php:60
+msgid "Import all previously uploaded objects"
+msgstr "Importera alla tidigare uppladdade objekt"
 
-#: ../bizifyme-ui.php:44
+#: ../bizifyme-ui.php:63
 msgid "Bizify.me account ID"
 msgstr "Bizify.me konto-ID"
 
-#: ../bizifyme-ui.php:47
+#: ../bizifyme-ui.php:66
 msgid "What is my account-ID?"
 msgstr "Vad är mitt konto-ID?"
 
-#: ../bizifyme-ui.php:50
+#: ../bizifyme-ui.php:69
 msgid "Post status"
 msgstr "Status blogginlägg"
 
-#: ../bizifyme-ui.php:65
+#: ../bizifyme-ui.php:84
 msgid "Category"
 msgstr "Kategori"
 
-#: ../bizifyme-ui.php:77
+#: ../bizifyme-ui.php:96
 msgid "Author"
 msgstr "Författare"
 
-#: ../bizifyme-ui.php:89
+#: ../bizifyme-ui.php:108 ../bizifyme-ui.php:111
 msgid "Allow comments"
 msgstr "Tillåt kommentarer"
 
-#: ../bizifyme-ui.php:95
+#: ../bizifyme-ui.php:117 ../bizifyme-ui.php:120
 msgid "Allow trackbacks and pingbacks"
 msgstr "Tillåt trackbacks och pingbacks"
 
-#: ../bizifyme-ui.php:104
+#: ../bizifyme-ui.php:128
 msgid "Save Changes"
 msgstr "Spara ändringar"
+
+#~ msgid ""
+#~ "Import objects automatically from your account at Bizify.me and publish "
+#~ "them on your WordPress blog."
+#~ msgstr ""
+#~ "Importera objekt automatiskt från ditt konto på Bizify.me och publicera "
+#~ "dem på din WordPress-blogg."
+
+#~ msgid "The import takes place every 15 minutes."
+#~ msgstr "Importering sker var 15:e minut."
 
 #~ msgid "Bizify.me settings"
 #~ msgstr "Inställningar Bizify.me"

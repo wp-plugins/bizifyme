@@ -7,9 +7,19 @@ function bizifyme_help()
 
 function bizifyme_warning()
 {
+	document.getElementById('device-mobile').style.textDecoration = 'none';
+	document.getElementById('device-desktop').style.textDecoration = 'none';
+	
 	if(document.getElementById('history').checked == true)
 	{
-		return confirm('<?php _e('Are you sure you want to include all previously saved objects? This can result in a large number of blog posts if you have many objects saved in your Bizify.me account.', 'bizifyme'); ?>');
+		if(confirm('<?php _e('Are you sure you want to import all previously uploaded objects? If you have uploaded many objects to your Bizify.me account this can result in a large number of new blog posts.', 'bizifyme'); ?>'))
+		{
+			document.getElementById('device-mobile').style.textDecoration = 'line-through';
+			document.getElementById('device-desktop').style.textDecoration = 'line-through';
+			return true;
+		}
+		
+		return false;
 	}
 }
 </SCRIPT>
@@ -27,29 +37,38 @@ function bizifyme_warning()
 
 <table class="form-table"><tr valign="top"><th scope="row"><?php _e('Auto import objects', 'bizifyme'); ?></th><td>
 
-	<label><input type="radio" id="selection" name="selection" value="date" <?php echo($options['settings']['selection'] != 'none' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
+	<fieldset>
+	<legend class="screen-reader-text"><?php _e('Auto import objects', 'bizifyme'); ?></legend>
+	<label><input type="radio" name="selection" value="date" <?php echo($options['settings']['selection'] != 'none' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
 	<br />
-	<label><input type="radio" id="selection" name="selection" value="none" <?php echo($options['settings']['selection'] == 'none' || $options['settings']['selection'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
-
+	<label><input type="radio" name="selection" value="none" <?php echo($options['settings']['selection'] == 'none' || $options['settings']['selection'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
+	</fieldset>
+	
 </td></tr><tr valign="top"><th scope="row"><?php _e('Uploaded from what devices', 'bizifyme'); ?></th><td>
 
-	<label><input type="radio" id="device" name="device" value="mobile" <?php echo($options['settings']['device'] == 'mobile' || $options['settings']['device'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Only from my Android / iPhone / iPad', 'bizifyme'); ?></label>
+	<fieldset>
+	<legend class="screen-reader-text"><?php _e('Uploaded from what devices', 'bizifyme'); ?></legend>
+	<label id="device-mobile"><input type="radio" name="device" value="mobile" <?php echo($options['settings']['device'] == 'mobile' || $options['settings']['device'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Only from my Android / iPhone / iPad', 'bizifyme'); ?></label>
 	<br />
-	<label><input type="radio" id="device" name="device" value="desktop,mobile" <?php echo($options['settings']['device'] == 'desktop,mobile' ? 'checked="checked"' : ''); ?> /> <?php _e('My computer and my Android / iPhone / iPad', 'bizifyme'); ?></label>
-
+	<label id="device-desktop"><input type="radio" name="device" value="desktop,mobile" <?php echo($options['settings']['device'] == 'desktop,mobile' ? 'checked="checked"' : ''); ?> /> <?php _e('My computer and my Android / iPhone / iPad', 'bizifyme'); ?></label>
+	</fieldset>
+	
 	</td></tr><tr valign="top"><th scope="row"></th><td>
 	
-	<label><input type="checkbox" id="history" name="history" onClick="return bizifyme_warning();" <?php echo($options['settings']['selection'] == 'complete' ? 'checked="checked"' : ''); ?> /> <?php _e('Include previously uploaded objects', 'bizifyme'); ?></label>
+	<fieldset>
+	<legend class="screen-reader-text"><?php _e('Import all previously uploaded objects', 'bizifyme'); ?></legend>
+	<label><input type="checkbox" id="history" name="history" onClick="return bizifyme_warning();" <?php echo($options['settings']['selection'] == 'complete' ? 'checked="checked"' : ''); ?> /> <?php _e('Import all previously uploaded objects', 'bizifyme'); ?></label>
+	</fieldset>
 	
 </td></tr><tr valign="top"><th scope="row"><?php _e('Bizify.me account ID', 'bizifyme'); ?></th><td>
 
-	<input name="bizifyme_id" id="bizifyme_id" type="text" type="number" maxlength="10" class="c2c-short_text" value="<?php echo $options['settings']['bizifyme_id']; ?>" /><BR />
+	<input name="bizifyme_id" type="text" type="number" maxlength="10" class="c2c-short_text" value="<?php echo $options['settings']['bizifyme_id']; ?>" /><BR />
 	<DIV style="display: inline; font-size: 90%;" id="help-link"><A HREF="#" onClick="bizifyme_help();"><?php _e('What is my account-ID?', 'bizifyme'); ?></A></DIV>
 	<DIV style="display: none; font-size: 90%;" id="help-text"><?php _e('You can find your account ID by <A HREF="https://bizify.me/login/" TARGET="_blank">login in to your Bizify.me account</A> and then go to <EM>Settings</EM> and click on <EM>Automatic publishing</EM>.', 'bizifyme') ?></DIV>
 
 </td></tr><tr valign="top"><th scope="row"><?php _e('Post status', 'bizifyme'); ?></th><td>
 
-	<select name="post_status" id="post_status">
+	<select name="post_status">
 		<?php
 		$statuses = get_post_statuses();
 		
@@ -88,23 +107,36 @@ function bizifyme_warning()
 
 </td></tr><tr valign="top"><th scope="row"><?php _e('Allow comments', 'bizifyme'); ?></th><td>
 	
-	<label><input type="radio" id="comment_status" name="comment_status" value="open" <?php echo($options['settings']['comment_status'] == 'open' || $options['settings']['comment_status'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
+	<fieldset>
+	<legend class="screen-reader-text"><?php _e('Allow comments', 'bizifyme'); ?></legend>
+	<label><input type="radio" name="comment_status" value="open" <?php echo($options['settings']['comment_status'] == 'open' || $options['settings']['comment_status'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
 	<br />
-	<label><input type="radio" id="comment_status" name="comment_status" value="closed" <?php echo($options['settings']['comment_status'] == 'closed' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
-
+	<label><input type="radio" name="comment_status" value="closed" <?php echo($options['settings']['comment_status'] == 'closed' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
+	</fieldset>
+	
 </td></tr><tr valign="top"><th scope="row"><?php _e('Allow trackbacks and pingbacks', 'bizifyme'); ?></th><td>
 	
-	<label><input type="radio" id="ping_status" name="ping_status" value="open" <?php echo($options['settings']['ping_status'] == 'open' || $options['settings']['ping_status'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
+	<fieldset>
+	<legend class="screen-reader-text"><?php _e('Allow trackbacks and pingbacks', 'bizifyme'); ?></legend>
+	<label><input type="radio" name="ping_status" value="open" <?php echo($options['settings']['ping_status'] == 'open' || $options['settings']['ping_status'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Yes', 'bizifyme'); ?></label>
 	<br />
-	<label><input type="radio" id="ping_status" name="ping_status" value="closed" <?php echo($options['settings']['ping_status'] == 'closed' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
-	
+	<label><input type="radio" name="ping_status" value="closed" <?php echo($options['settings']['ping_status'] == 'closed' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
+	</fieldset>
 	
 </td></tr><tr valign="top"><th scope="row" colspan="2">
 <p class="submit">
-<input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'bizifyme'); ?>" />
+<input type="submit" name="submit" class="button button-primary" value="<?php _e('Save Changes', 'bizifyme'); ?>" />
 </p>
+
 </th></tr></table>
 
 </form>
-</div>
 
+<?php
+if(strlen($options['settings']['latest_import']) > 0)
+{
+	echo('<span style="color: transparent;">Latest import: ' . $options['settings']['latest_import']) . '(UTC)</span>';
+}
+?>
+
+</div>

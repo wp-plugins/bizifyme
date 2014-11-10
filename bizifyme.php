@@ -5,13 +5,13 @@ Plugin Name: Bizify.me
 Plugin Script: bizifyme.php
 Plugin URI: https://www.bizify.me/wordpress/
 Description: Activates Bizify.me on your WordPress blog.
-Version: 1.4.13
+Version: 1.5
 Author: Bizify.me
 Author URI: https://www.bizify.me
 License: GPLv2 or later
 */
 
-$plugin_version = '1.4.13';
+$plugin_version = '1.5';
 
 if(isset($_GET["html"]))
 { 
@@ -206,9 +206,11 @@ class options_bizifyme
 		add_action('bizifyme_cron', array($this, 'import_feed'));
 	}
 	
-	function admin_menu ()
+	function admin_menu()
 	{
-		add_plugins_page('Bizify.me settings', 'Bizify.me', 'manage_options', 'options_page_bizifyme', array($this, 'settings_page'));
+		add_menu_page('Bizify.me', 'Bizify.me', 'edit_posts', 'bizifyme-menu-1', array($this, 'welcome_page'), esc_url( plugins_url('icon.png', __FILE__ ) ));
+		add_submenu_page('bizifyme-menu-1', __('Getting started', 'bizifyme'), __('Getting started', 'bizifyme'), 'edit_posts', 'bizifyme-menu-1', array($this, 'welcome_page'));
+		add_submenu_page('bizifyme-menu-1', __('Settings', 'bizifyme'), __('Settings', 'bizifyme'), 'manage_options', 'bizifyme-menu-2', array($this, 'settings_page'));
 	}
 	
 	function cron_15minutes($schedules)
@@ -217,7 +219,15 @@ class options_bizifyme
 		return $schedules;
 	}
 	
-	function settings_page ()
+	function welcome_page()
+	{
+		global $plugin_version;
+		
+		echo '<iframe style="width: 100%; height: 100%; border: none;" id="bizifymeiframe" allowtransparency="true" scrolling="no" src="https://bizify.me/wordpress/?language=' . strtolower(get_bloginfo('language')) . '&version=' . $plugin_version . '"></iframe>';
+		echo '<script type="text/javascript">window.addEventListener("message", function(e) { if(e.origin == "https://bizify.me" && isNaN(e.data) == false) { document.getElementById("bizifymeiframe").style.height = e.data + "px"; } }, false);</script>';
+	}
+	
+	function settings_page()
 	{
 		if(!current_user_can('manage_options'))
 		{
@@ -295,7 +305,7 @@ class options_bizifyme
 					{
 						if($options['settings']['selection'] == 'complete' || strtotime($item->get_date('Y-m-d H:i:s')) >= strtotime($options['settings']['latest_import']))
 						{
-							if( (stripos($options['settings']['device'], $item->get_category()->get_label()) !== false) || ($options['settings']['device'] == '' AND $item->get_category()->get_label() == "mobile") )
+							if(($options['settings']['selection'] == 'complete') || (stripos($options['settings']['device'], $item->get_category()->get_label()) !== false) || ($options['settings']['device'] == '' AND $item->get_category()->get_label() == "mobile"))
 							{
 								$new_post = array(
 									'post_title'    	=> $item->get_title(),
