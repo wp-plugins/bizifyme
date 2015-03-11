@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bizify.me\n"
-"POT-Creation-Date: 2015-03-11 14:36+0100\n"
-"PO-Revision-Date: 2015-03-11 14:36+0100\n"
+"POT-Creation-Date: 2015-03-11 14:35+0100\n"
+"PO-Revision-Date: 2015-03-11 15:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: Swedish\n"
+"Language: Turkish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,53 +20,53 @@ msgid ""
 "uploaded many objects to your Bizify.me account this can result in a large "
 "number of new blog posts."
 msgstr ""
-"Är du helt säker på att du vill importera alla tidigare uppladdade objekt? "
-"Om du har laddat upp många objekt till ditt konto på Bizify.me kan detta "
-"resultera i ett stort antal nya blogginlägg."
+"Daha önce yüklenen tüm nesneleri almak istediğinizden emin misiniz? Bizify."
+"me hesabınıza çok sayıda nesne yüklediyseniz, bu yeni gönderilerin çok "
+"sayıda olmasına neden olabilir."
 
 #: ../bizifyme-ui.php:34
 msgid ""
 "Automatically import objects from your Bizify.me account to your WordPress "
 "blog every 15 minutes."
 msgstr ""
-"Importera objekt automatiskt från ditt konto på Bizify.me till din WordPress-"
-"blogg var femtonde minut."
+"Nesneleri otomatik olarak 15 dakikada Bizify.me hesabınızdan WordPress "
+"blogunuza alın."
 
 #: ../bizifyme-ui.php:38 ../bizifyme-ui.php:41
 msgid "Auto import objects"
-msgstr "Importera objekt automatiskt"
+msgstr "Nesneleri otomatik al"
 
 #: ../bizifyme-ui.php:42 ../bizifyme-ui.php:112 ../bizifyme-ui.php:121
 msgid "Yes"
-msgstr "Ja"
+msgstr "Evet"
 
 #: ../bizifyme-ui.php:44 ../bizifyme-ui.php:114 ../bizifyme-ui.php:123
 msgid "No"
-msgstr "Nej"
+msgstr "Hayır"
 
 #: ../bizifyme-ui.php:47 ../bizifyme-ui.php:50
 msgid "Uploaded from which devices"
-msgstr "Uppladdad från vilka enheter"
+msgstr "Hangi cihazlardan yüklendi"
 
 #: ../bizifyme-ui.php:51
 msgid "Only from my Android / iPhone / iPad"
-msgstr "Endast från min Android / iPhone / iPad"
+msgstr "Sadece benim Android / iPhone / iPad 'imdan"
 
 #: ../bizifyme-ui.php:53
 msgid "My computer and my Android / iPhone / iPad"
-msgstr "Min dator och min Android / iPhone / iPad"
+msgstr "Benim bilgisayarım ve benim Android / iPhone / iPad 'im"
 
 #: ../bizifyme-ui.php:59 ../bizifyme-ui.php:60
 msgid "Import all previously uploaded objects"
-msgstr "Importera alla tidigare uppladdade objekt"
+msgstr "Daha önce yüklenen tüm nesneleri al"
 
 #: ../bizifyme-ui.php:63
 msgid "Bizify.me account ID"
-msgstr "Bizify.me konto-ID"
+msgstr "Bizify.me hesap numarası"
 
 #: ../bizifyme-ui.php:66
 msgid "What is my account ID?"
-msgstr "Vad är mitt konto-ID?"
+msgstr "Hesap numaram nedir?"
 
 #: ../bizifyme-ui.php:67 ../bizifyme.php:275
 msgid ""
@@ -74,13 +74,13 @@ msgid ""
 "\"_blank\">login in to your Bizify.me account</A> and then go to "
 "<EM>Settings</EM> and click on <EM>Automatic publishing</EM>."
 msgstr ""
-"Du kan hitta ditt konto-ID genom att <A HREF=\"https://bizify.me/login/\" "
-"TARGET=\"_blank\">logga in på ditt Bizify.me konto</A> och sedan gå in på "
-"<EM>Inställningar</EM> och klicka på <EM>Automatisk publicering</EM>."
+"Hesap kimliğinizi bulmak için <A HREF=\"https://bizify.me/login/\" TARGET="
+"\"_blank\">Bizify.me hesabınıza giriş yapın</A> ve ardından gidin "
+"<EM>Ayarlar</EM> tıklayın ve <EM>Otomatik yayınlama</EM>."
 
 #: ../bizifyme-ui.php:69
 msgid "Post status"
-msgstr "Status blogginlägg"
+msgstr "Son durum"
 
 #: ../bizifyme-ui.php:84
 msgid "Category"
@@ -88,56 +88,55 @@ msgstr "Kategori"
 
 #: ../bizifyme-ui.php:96
 msgid "Author"
-msgstr "Författare"
+msgstr "Yazar"
 
 #: ../bizifyme-ui.php:108 ../bizifyme-ui.php:111
 msgid "Allow comments"
-msgstr "Tillåt kommentarer"
+msgstr "Yorumlara izin ver"
 
 #: ../bizifyme-ui.php:117 ../bizifyme-ui.php:120
 msgid "Allow trackbacks and pingbacks"
-msgstr "Tillåt trackbacks och pingbacks"
+msgstr "Notlara ve pingbacklere izin ver"
 
 #: ../bizifyme-ui.php:128
 msgid "Save Changes"
-msgstr "Spara ändringar"
+msgstr "Değişiklikleri Kaydet"
 
 #: ../bizifyme.php:173 ../bizifyme.php:177
 msgid "Sell your digital products using Bizify.me"
-msgstr "Sälj dina digitala produkter via Bizify.me"
+msgstr "Bizify.me kullanarak dijital ürünlerinizi satabilirsiniz"
 
 #: ../bizifyme.php:173
 msgid "Sell Media / Product"
-msgstr "Sälj media / produkt"
+msgstr "Medya satış / ürün"
 
 #: ../bizifyme.php:212
 msgid "Getting started"
-msgstr "Komma igång"
+msgstr "Başlarken"
 
 #: ../bizifyme.php:213
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "Ayarlar"
 
 #: ../bizifyme.php:218
 msgid "Every 15 Minutes"
-msgstr "Var 15:de minut"
+msgstr "Her 15 dakikada"
 
 #: ../bizifyme.php:226
 msgid "Getting started with Bizify.me"
-msgstr "Komma igång med Bizify.me"
+msgstr "Bizify.Me ile çalışmaya başlamak"
 
 #: ../bizifyme.php:236
 msgid "You do not have sufficient permission to access this page."
-msgstr ""
-"Du har inte tillräcklig behörighet för att få tillgång till denna sida."
+msgstr "Bu sayfaya erişmek için yeterli izniniz yok."
 
 #: ../bizifyme.php:267
 msgid "Settings saved."
-msgstr "Inställningar sparade."
+msgstr "Ayarlar kaydedildi."
 
 #: ../bizifyme.php:275
 msgid "Your Bizify.me account ID is missing."
-msgstr "Ditt Bizify.me konto-ID saknas."
+msgstr "Bizify.me hesap numaranız eksik."
 
 #~ msgid ""
 #~ "Import objects automatically from your account at Bizify.me and publish "

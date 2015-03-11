@@ -44,10 +44,10 @@ function bizifyme_warning()
 	<label><input type="radio" name="selection" value="none" <?php echo($options['settings']['selection'] == 'none' || $options['settings']['selection'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('No', 'bizifyme'); ?></label>
 	</fieldset>
 	
-</td></tr><tr valign="top"><th scope="row"><?php _e('Uploaded from what devices', 'bizifyme'); ?></th><td>
+</td></tr><tr valign="top"><th scope="row"><?php _e('Uploaded from which devices', 'bizifyme'); ?></th><td>
 
 	<fieldset>
-	<legend class="screen-reader-text"><?php _e('Uploaded from what devices', 'bizifyme'); ?></legend>
+	<legend class="screen-reader-text"><?php _e('Uploaded from which devices', 'bizifyme'); ?></legend>
 	<label id="device-mobile"><input type="radio" name="device" value="mobile" <?php echo($options['settings']['device'] == 'mobile' || $options['settings']['device'] == '' ? 'checked="checked"' : ''); ?> /> <?php _e('Only from my Android / iPhone / iPad', 'bizifyme'); ?></label>
 	<br />
 	<label id="device-desktop"><input type="radio" name="device" value="desktop,mobile" <?php echo($options['settings']['device'] == 'desktop,mobile' ? 'checked="checked"' : ''); ?> /> <?php _e('My computer and my Android / iPhone / iPad', 'bizifyme'); ?></label>
@@ -63,7 +63,7 @@ function bizifyme_warning()
 </td></tr><tr valign="top"><th scope="row"><?php _e('Bizify.me account ID', 'bizifyme'); ?></th><td>
 
 	<input name="bizifyme_id" type="text" type="number" maxlength="10" class="c2c-short_text" value="<?php echo $options['settings']['bizifyme_id']; ?>" /><BR />
-	<DIV style="display: inline; font-size: 90%;" id="help-link"><A HREF="#" onClick="bizifyme_help();"><?php _e('What is my account-ID?', 'bizifyme'); ?></A></DIV>
+	<DIV style="display: inline; font-size: 90%;" id="help-link"><A HREF="#" onClick="bizifyme_help();"><?php _e('What is my account ID?', 'bizifyme'); ?></A></DIV>
 	<DIV style="display: none; font-size: 90%;" id="help-text"><?php _e('You can find your account ID by <A HREF="https://bizify.me/login/" TARGET="_blank">login in to your Bizify.me account</A> and then go to <EM>Settings</EM> and click on <EM>Automatic publishing</EM>.', 'bizifyme') ?></DIV>
 
 </td></tr><tr valign="top"><th scope="row"><?php _e('Post status', 'bizifyme'); ?></th><td>
