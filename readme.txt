@@ -2,7 +2,7 @@
 Contributors: bizifyme 
 Tags: commerce,e-commerce,payment,sell,buy,shopping,cart,store,merchant,gateway,visa,mastercard
 Requires at least: 3.0
-Tested up to: 4.1
+Tested up to: 4.2.1
 Stable tag: 1.5.2
 License: GPLv2 or later
 
